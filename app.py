@@ -57,14 +57,58 @@ def patientinfo():
         hphone = request.form["hphone"]
         wphone = request.form["wphone"]
         mphone = request.form["mphone"]
+        email = request.form["email"]
         loginname = request.form["loginname"]
         password = request.form["password"]
         mongo.db.patient_info.insert_one(
             {"title":title, "firstname":firstname, "lastname":lastname, "mi":mi, "patientid":patientid,
              "birthdate":birthdate, "gender":gender, "race":race, "ethnicity":ethnicity,
              "address":address, "city":city, "state":state, "country":country,"zip":zip,
-             "hphone":hphone, "wphone":wphone, "mphone":mphone, "loginname":loginname, "password":password, "active":"Y"})
+             "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "loginname":loginname, "password":password, "active":"Y"})
         return redirect("/patientinfo")
+
+@app.route("/patlist", methods = ['GET', 'POST'])
+def patlist():
+    if request.method == 'GET':
+        patientList = mongo.db.patient_info.find({})
+        return render_template("pat_list.html", patientList = patientList)
+
+@app.route("/delete", methods = ['GET', 'POST'])
+def delete():
+    if request.method == 'GET':
+        patientid = request.args['patientid']
+        print(patientid)
+        mongo.db.patient_info.delete_one({'patientid':patientid})
+        return redirect("/patlist")
+
+@app.route("/edit", methods=['GET','POST'])
+def edit():
+    if request.method == 'GET':
+        patientid = request.args['patientid']
+        record = mongo.db.patient_info.find_one({"patientid":patientid})
+        title = record["title"]
+        firstname = record["firstname"]
+        lastname = record["lastname"]
+        mi = record["mi"]
+        patientid = record["patientid"]
+        birthdate = record["birthdate"]
+        gender = record["gender"]
+        race = record["race"]
+        ethnicity = record["ethnicity"]
+        address = record["address"]
+        city = record["city"]
+        state = record["state"]
+        country = record["country"]
+        zip = record["zip"]
+        hphone = record["hphone"]
+        wphone = record["wphone"]
+        mphone = record["mphone"]
+        email = record["email"]
+        loginname = record["loginname"]
+        password = record["password"]
+        return render_template("patient_reg.html", title = title, firstname = firstname, lastname = lastname, mi = mi, patientid = patientid,
+                               birthdate = birthdate, gender = gender, race = race, ethnicity = ethnicity, address = address, city = city, state = state, country = country, zip = zip,
+                               hphone = hphone, wphone = wphone, mphone = mphone, email = email, loginname = loginname)
 
 #run
 if __name__ == "__main__":
