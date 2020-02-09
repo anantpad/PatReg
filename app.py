@@ -59,12 +59,11 @@ def patientinfo():
         mphone = request.form["mphone"]
         loginname = request.form["loginname"]
         password = request.form["password"]
-        active = "Y"
         mongo.db.patient_info.insert_one(
             {"title":title, "firstname":firstname, "lastname":lastname, "mi":mi, "patientid":patientid,
              "birthdate":birthdate, "gender":gender, "race":race, "ethnicity":ethnicity,
              "address":address, "city":city, "state":state, "country":country,"zip":zip,
-             "hphone":hphone, "wphone":wphone, "mphone":mphone, "loginname":loginname, "password":password})
+             "hphone":hphone, "wphone":wphone, "mphone":mphone, "loginname":loginname, "password":password, "active":"Y"})
         return redirect("/patientinfo")
 
 #run

@@ -3,6 +3,7 @@
   <head>
     <title>Patient Registration</title>
     <meta charset="utf-8">
+    {% extends 'layout.html' %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
     <!-- <link rel="stylesheet" href="../static/style.css"> -->
@@ -19,6 +20,7 @@
     </style> -->
   </head>
   <body>
+    {% block content %}
     <h1 class="bg-info p-3">New Patient Registration <i class="fas fa-id-card"></i></h1>
     <form class="bg bg-light" action="/patientinfo" method="post">
       <div id="accordian">
@@ -156,5 +158,6 @@
         </div>
       </div>
     </form>
+    {% endblock %}
   </body>
 </html>
