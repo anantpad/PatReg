@@ -14,20 +14,24 @@
     <form class="form-inline pl-5" action="/" method="post">
       <div class="form-row p-2">
         <div class="p-2 sr-only">User Name</div>
-        <div class=""><input type="text" placeholder="user name" name="username" value=""></div>
+        <div class="">
+          <input class="form-control" type="text" placeholder="user name" name="username" value="{{username}}">
+        </div>
       </div>
       <div class="form-row p-2">
         <div class="p-2 sr-only">Password</div>
-        <div class=""><input type="password" placeholder="password" name="password" value=""></div>
+        <div class="">
+          <input class="form-control" type="password" placeholder="password" name="password" value="{{password}}">
+        </div>
       </div>
       <div class="form-row p-2">
         <div class="p-2">
-          <input type="submit" name="" value="Submit">
+          <input class="btn btn-primary" type="submit" name="" value="Submit">
         </div>
       </div>
-      <div class="form-row col-sm-6 p-5">
+      <div class="form-row p-2">
         <label for=""></label>
-        <a class="btn btn-primary" role="button" href="/patientinfo">Click to Regsiter Here</a>
+        <a class="btn btn-primary" role="button" href="/patientinfo">Click to Register Here</a>
       </div>
     </form>
 </body>

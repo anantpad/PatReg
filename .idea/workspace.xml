@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b4f5131-9c3f-4454-8668-f88c3a1157b4" name="Default Changelist" comment="First Commit">
-      <change beforePath="$PROJECT_DIR$/.idea/PatReg.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PatReg.iml" afterDir="false" />
+    <list default="true" id="0b4f5131-9c3f-4454-8668-f88c3a1157b4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/LowFidelityPatRegDiagrams.epgz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/Resources/SampleStyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/editcareteam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/editcontacts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/editinsurance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/editpatientenrollment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/editpharmacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/loggedpatient.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/newcareteam.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/newcontacts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/newinsurance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/newpatientenrollment.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/newpharmacy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/patientlogin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Mocks/pages/reset.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/patient_reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/patient_reg.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +71,31 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/venv/Scripts/python.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunManager" selected="Python.app">
+    <configuration name="DEANum (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PatReg" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/SimpleProjects" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/SimpleProjects/DEANum.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="DEANum" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PatReg" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -101,6 +141,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.app" />
+        <item itemvalue="Python.DEANum (1)" />
         <item itemvalue="Python.DEANum" />
       </list>
     </recent_temporary>
@@ -205,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580191173141</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="First Commit">
+      <created>1580194463397</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1580194463398</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -218,62 +266,62 @@
     <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="392" y="92" key="#Notifications" timestamp="1580189999724">
+    <state x="392" y="92" key="#Notifications" timestamp="1580194479623">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="92" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1580189999724" />
+    <state x="392" y="92" key="#Notifications/0.0.1600.860@0.0.1600.860" timestamp="1580194479623" />
     <state x="254" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580188457072">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1580188457072" />
-    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1580194383097">
+    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1580194454944">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580194383096" />
+    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1580194454944" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1580191160359">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1580191160359" />
-    <state x="592" y="199" key="FileChooserDialogImpl" timestamp="1580194123840">
+    <state x="592" y="199" key="FileChooserDialogImpl" timestamp="1580698566069">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="592" y="199" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1580194123840" />
+    <state x="592" y="199" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1580698566069" />
     <state x="681" y="329" width="261" height="201" key="Github.ShareDialog" timestamp="1579463668633">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="681" y="329" width="261" height="201" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1579463668633" />
-    <state width="789" height="184" key="GridCell.Tab.0.bottom" timestamp="1580190003911">
+    <state width="1579" height="184" key="GridCell.Tab.0.bottom" timestamp="1581234119853">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="184" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1580190003911" />
+    <state width="1579" height="184" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581234119853" />
     <state width="1899" height="198" key="GridCell.Tab.0.bottom/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
-    <state width="789" height="184" key="GridCell.Tab.0.center" timestamp="1580190003911">
+    <state width="1579" height="184" key="GridCell.Tab.0.center" timestamp="1581234119853">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="184" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1580190003911" />
+    <state width="1579" height="184" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581234119853" />
     <state width="1899" height="198" key="GridCell.Tab.0.center/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
-    <state width="789" height="184" key="GridCell.Tab.0.left" timestamp="1580190003910">
+    <state width="1579" height="184" key="GridCell.Tab.0.left" timestamp="1581234119853">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="184" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1580190003910" />
+    <state width="1579" height="184" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581234119853" />
     <state width="1899" height="198" key="GridCell.Tab.0.left/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983713" />
-    <state width="789" height="184" key="GridCell.Tab.0.right" timestamp="1580190003911">
+    <state width="1579" height="184" key="GridCell.Tab.0.right" timestamp="1581234119853">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="789" height="184" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1580190003911" />
+    <state width="1579" height="184" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581234119853" />
     <state width="1899" height="198" key="GridCell.Tab.0.right/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
     <state x="49" y="80" key="SettingsEditor" timestamp="1580194275120">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="49" y="80" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1580194275120" />
-    <state x="392" y="167" key="Vcs.Push.Dialog.v2" timestamp="1580191188912">
+    <state x="392" y="167" key="Vcs.Push.Dialog.v2" timestamp="1580194467714">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="167" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580191188912" />
-    <state x="508" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1579465422626">
+    <state x="392" y="167" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1580194467714" />
+    <state x="508" y="259" key="com.intellij.ide.util.TipDialog" timestamp="1580520600100">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="508" y="259" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1579465422626" />
+    <state x="508" y="259" key="com.intellij.ide.util.TipDialog/0.0.1600.860@0.0.1600.860" timestamp="1580520600100" />
     <state x="611" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579463679206">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

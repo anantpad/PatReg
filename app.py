@@ -2,7 +2,7 @@
 #import packages
 from flask import Flask, request, render_template
 from flask_pymongo import PyMongo
-from flask import redirect
+from flask import redirect, session, flash
 
 #initialize
 #this function initializes any application
@@ -21,18 +21,26 @@ def login():
     if request.method == 'GET':
         return render_template("login.html")
     else:
-        username = request.form["username"]
+        loginname = request.form["username"]
         password = request.form["password"]
-        if username == 'sridhar' and password == 'asdf':
-            return redirect("/patientinfo")
+        record = mongo.db.patient_info.find_one({"loginname": loginname, "password": password})
+        print(record["loginname"])
+        if record["loginname"] == loginname and record["password"] == password:
+            return render_template("patient_reg.html", firstname = record["firstname"], lastname = record["lastname"])
+        # username = request.form["username"]
+        # password = request.form["password"]
+        # if username == 'sridhar' and password == 'asdf':
+        #     return redirect("/patientinfo")
+        else:
+            flash("Invalid Username or password")
 
 
 @app.route("/patientinfo", methods = ['GET', 'POST'])
 def patientinfo():
     if request.method == 'GET':
-        # name = "Sridhar"
-        return render_template("patient_reg.html") #, firstname = name)
+        return render_template("patient_reg.html")
     elif request.method == "POST":
+        title = request.form["title"]
         firstname = request.form["firstname"]
         lastname = request.form["lastname"]
         mi = request.form["mi"]
@@ -40,15 +48,23 @@ def patientinfo():
         birthdate = request.form["birthdate"]
         gender = request.form["gender"]
         race = request.form["race"]
+        ethnicity = request.form["ethnicity"]
         address = request.form["address"]
         city = request.form["city"]
         state = request.form["state"]
         country = request.form["country"]
         zip = request.form["zip"]
+        hphone = request.form["hphone"]
+        wphone = request.form["wphone"]
+        mphone = request.form["mphone"]
         loginname = request.form["loginname"]
         password = request.form["password"]
+        active = "Y"
         mongo.db.patient_info.insert_one(
-            {"firstname":firstname, "lastname":lastname, "mi":mi, "patientid":patientid, "birthdate":birthdate, "gender":gender, "race":race, "address":address, "city":city, "state":state, "country":country,"zip":zip, "loginname":loginname, "password":password})
+            {"title":title, "firstname":firstname, "lastname":lastname, "mi":mi, "patientid":patientid,
+             "birthdate":birthdate, "gender":gender, "race":race, "ethnicity":ethnicity,
+             "address":address, "city":city, "state":state, "country":country,"zip":zip,
+             "hphone":hphone, "wphone":wphone, "mphone":mphone, "loginname":loginname, "password":password})
         return redirect("/patientinfo")
 
 #run
