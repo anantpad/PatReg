@@ -106,9 +106,28 @@ def edit():
         email = record["email"]
         loginname = record["loginname"]
         password = record["password"]
-        return render_template("patient_reg.html", title = title, firstname = firstname, lastname = lastname, mi = mi, patientid = patientid,
+        print(address)
+        return render_template("editpatientreg.html", title = title, firstname = firstname, lastname = lastname, mi = mi, patientid = patientid,
                                birthdate = birthdate, gender = gender, race = race, ethnicity = ethnicity, address = address, city = city, state = state, country = country, zip = zip,
                                hphone = hphone, wphone = wphone, mphone = mphone, email = email, loginname = loginname)
+    elif request.method == 'POST':
+        patientid = request.form["patientid"]
+        race = request.form["race"]
+        ethnicity = request.form["ethnicity"]
+        address = request.form["address"]
+        city = request.form["city"]
+        state = request.form["state"]
+        country = request.form["country"]
+        zip = request.form["zip"]
+        hphone = request.form["hphone"]
+        wphone = request.form["wphone"]
+        mphone = request.form["mphone"]
+        email = request.form["email"]
+        loginname = request.form["loginname"]
+        mongo.db.patient_info.update_one({"patientid":patientid},
+                                         {"$set":{"race":race,"ethnicity":ethnicity, "address":address,"city":city, "state":state, "country":country, "zip":zip,
+                                                  "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "loginname":loginname}})
+        return redirect("/patlist")
 
 #run
 if __name__ == "__main__":
