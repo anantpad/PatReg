@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0b4f5131-9c3f-4454-8668-f88c3a1157b4" name="Default Changelist" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/templates/editPatientReg.html" afterDir="false" />
+    <list default="true" id="0b4f5131-9c3f-4454-8668-f88c3a1157b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/editPatientReg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editPatientReg.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -271,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581290344764</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="First Commit">
+      <created>1581304714440</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1581304714440</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -303,18 +309,18 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1580188457072" />
-    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1581290643961">
+    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1581304713147">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581290643961" />
+    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581304713147" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1581290478309">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1581290478309" />
-    <state x="592" y="199" key="FileChooserDialogImpl" timestamp="1581290434536">
+    <state x="592" y="199" key="FileChooserDialogImpl" timestamp="1581787369192">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="592" y="199" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581290434536" />
+    <state x="592" y="199" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581787369192" />
     <state x="609" y="309" key="Github.CreatePullRequestDialog" timestamp="1581290571416">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -323,25 +329,25 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="681" y="329" width="261" height="201" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1581270236467" />
-    <state width="1579" height="184" key="GridCell.Tab.0.bottom" timestamp="1581292242013">
+    <state width="1579" height="184" key="GridCell.Tab.0.bottom" timestamp="1581786333433">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="184" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581292242013" />
+    <state width="1579" height="184" key="GridCell.Tab.0.bottom/0.0.1600.860@0.0.1600.860" timestamp="1581786333433" />
     <state width="1899" height="198" key="GridCell.Tab.0.bottom/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
-    <state width="1579" height="184" key="GridCell.Tab.0.center" timestamp="1581292242013">
+    <state width="1579" height="184" key="GridCell.Tab.0.center" timestamp="1581786333432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="184" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581292242013" />
+    <state width="1579" height="184" key="GridCell.Tab.0.center/0.0.1600.860@0.0.1600.860" timestamp="1581786333432" />
     <state width="1899" height="198" key="GridCell.Tab.0.center/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
-    <state width="1579" height="184" key="GridCell.Tab.0.left" timestamp="1581292242013">
+    <state width="1579" height="184" key="GridCell.Tab.0.left" timestamp="1581786333432">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="184" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581292242013" />
+    <state width="1579" height="184" key="GridCell.Tab.0.left/0.0.1600.860@0.0.1600.860" timestamp="1581786333432" />
     <state width="1899" height="198" key="GridCell.Tab.0.left/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983713" />
-    <state width="1579" height="184" key="GridCell.Tab.0.right" timestamp="1581292242013">
+    <state width="1579" height="184" key="GridCell.Tab.0.right" timestamp="1581786333433">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state width="1579" height="184" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581292242013" />
+    <state width="1579" height="184" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581786333433" />
     <state width="1899" height="198" key="GridCell.Tab.0.right/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
     <state x="49" y="80" key="SettingsEditor" timestamp="1581288958352">
       <screen x="0" y="0" width="1600" height="860" />
