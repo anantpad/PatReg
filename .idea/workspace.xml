@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b4f5131-9c3f-4454-8668-f88c3a1157b4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/editPatientReg.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/editPatientReg.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +46,7 @@
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RunManager" selected="Python.app">
     <configuration name="DEANum (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -277,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581304714440</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="First Commit">
+      <created>1581787414693</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1581787414693</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -309,26 +315,26 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="254" y="89" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1600.860@0.0.1600.860" timestamp="1580188457072" />
-    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1581304713147">
+    <state x="467" y="29" key="CommitChangelistDialog2" timestamp="1581787413405">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581304713147" />
+    <state x="467" y="29" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1581787413405" />
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog" timestamp="1581290478309">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="92" y="92" width="1416" height="676" key="DiffContextDialog/0.0.1600.860@0.0.1600.860" timestamp="1581290478309" />
-    <state x="592" y="199" key="FileChooserDialogImpl" timestamp="1581787369192">
+    <state x="592" y="199" key="FileChooserDialogImpl" timestamp="1581788435463">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="592" y="199" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581787369192" />
+    <state x="592" y="199" key="FileChooserDialogImpl/0.0.1600.860@0.0.1600.860" timestamp="1581788435463" />
     <state x="609" y="309" key="Github.CreatePullRequestDialog" timestamp="1581290571416">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="609" y="309" key="Github.CreatePullRequestDialog/0.0.1600.860@0.0.1600.860" timestamp="1581290571416" />
-    <state x="681" y="329" width="261" height="201" key="Github.ShareDialog" timestamp="1581270236467">
+    <state x="681" y="329" width="261" height="201" key="Github.ShareDialog" timestamp="1581788107761">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="681" y="329" width="261" height="201" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1581270236467" />
+    <state x="681" y="329" width="261" height="201" key="Github.ShareDialog/0.0.1600.860@0.0.1600.860" timestamp="1581788107761" />
     <state width="1579" height="184" key="GridCell.Tab.0.bottom" timestamp="1581786333433">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -349,18 +355,18 @@
     </state>
     <state width="1579" height="184" key="GridCell.Tab.0.right/0.0.1600.860@0.0.1600.860" timestamp="1581786333433" />
     <state width="1899" height="198" key="GridCell.Tab.0.right/0.0.1920.1040/977.-1080.1920.1040/-943.-1202.1920.1160@977.-1080.1920.1040" timestamp="1576889983714" />
-    <state x="49" y="80" key="SettingsEditor" timestamp="1581288958352">
+    <state x="49" y="80" key="SettingsEditor" timestamp="1581788362777">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="49" y="80" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1581288958352" />
+    <state x="49" y="80" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1581788362777" />
     <state x="565" y="138" key="VCS.ChangeListViewerDialog" timestamp="1581290330563">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="565" y="138" key="VCS.ChangeListViewerDialog/0.0.1600.860@0.0.1600.860" timestamp="1581290330563" />
-    <state x="392" y="167" key="Vcs.Push.Dialog.v2" timestamp="1581290355844">
+    <state x="392" y="167" key="Vcs.Push.Dialog.v2" timestamp="1581787426406">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="167" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581290355844" />
+    <state x="392" y="167" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1581787426406" />
     <state x="439" y="159" key="com.intellij.dvcs.ui.CompareBranchesDialog" timestamp="1581290569210">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
