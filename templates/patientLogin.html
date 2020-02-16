@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Start Here</title>
+    <title>Patient Login</title>
     {% extends 'layout.html' %}
 </head>
 <body>
   {% block content %}
-  <h1 class="bg-info p-5">Registration <i class="fa fa-user-injured"></i></h1>
-    <form class="form-inline pl-5" action="" method="post">
+  <h1 class="bg-info p-5">Patient Portal <i class="fa fa-user"></i></h1>
+    <form class="form-inline pl-5" action="/patient" method="post">
       <div class="form-row p-2">
         <div class="p-2 sr-only">User Name</div>
         <div class="">
@@ -25,14 +25,6 @@
         <div class="p-2">
           <input class="btn btn-primary" type="submit" name="" value="Submit">
         </div>
-      </div>
-      <div class="form-row p-2">
-        <label for=""></label>
-        <a class="btn btn-primary" role="button" href="/patientinfo">Click to Register Here</a>
-      </div>
-      <div class="form-row p-2">
-        <label for=""></label>
-        <a class="btn btn-primary" role="button" href="/patlist">Patient List</a>
       </div>
     </form>
   {% endblock %}

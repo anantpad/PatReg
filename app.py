@@ -34,6 +34,17 @@ def login():
         else:
             flash("Invalid Username or password")
 
+@app.route("/patient", methods = ['GET', 'POST'])
+def patlogin():
+    if request.method =='GET':
+        return render_template("patientLogin.html")
+    else:
+        loginname = request.form["username"]
+        password = request.form["password"]
+        record = mongo.db.patient_info.find_one({"loginname": loginname, "password": password})
+        print(record["loginname"])
+        patientid = record['patientid']
+        redirect("/edit")
 
 @app.route("/patientinfo", methods = ['GET', 'POST'])
 def patientinfo():
