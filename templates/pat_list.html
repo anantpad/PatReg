@@ -8,8 +8,8 @@
   <body>
     {% block content %}
     <h1 class="bg-info p-5">Patient List <i class="fas fa-list"></i></h1>
-    <form class="form-group" action="/patlist" method="post">
-      <div class="form-row pl-5 pr-5 pt-5">
+    <form class="form-group pt-5" action="/patlist" method="post">
+      <div class="form-row pl-5 pr-5">
         <table class="table table-responsive-sm table-striped table-hover table-bordered">
           <caption>List of Patients</caption>
           <thead class="table-dark">
@@ -81,6 +81,14 @@
             {% endfor %}
           </tbody>
         </table>
+      </div>
+      <div class="form-row pl-5 pr-5">
+        <div class="form-inline col-auto">
+          <a class="btn btn-primary col-auto" role="button" href="/patientinfo">Don't see your patient? Click to Register Here</a>
+        </div>
+        <div class="form-inline col-auto">
+          <a class="btn btn-primary col-auto" href="/">Logout</a>
+        </div>
       </div>
     </form>
     {% endblock %}

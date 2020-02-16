@@ -23,14 +23,12 @@ def login():
     else:
         loginname = request.form["username"]
         password = request.form["password"]
-        record = mongo.db.patient_info.find_one({"loginname": loginname, "password": password})
-        print(record["loginname"])
-        if record["loginname"] == loginname and record["password"] == password:
-            return render_template("patient_reg.html", firstname = record["firstname"], lastname = record["lastname"])
-        # username = request.form["username"]
-        # password = request.form["password"]
-        # if username == 'sridhar' and password == 'asdf':
-        #     return redirect("/patientinfo")
+        # record = mongo.db.patient_info.find_one({"loginname": loginname, "password": password})
+        # print(record["loginname"])
+        # if record["loginname"] == loginname and record["password"] == password:
+        #     return render_template("patient_reg.html", firstname = record["firstname"], lastname = record["lastname"])
+        if loginname == 'sridhar' and password == 'asdf1234':
+            return redirect("/patlist")
         else:
             flash("Invalid Username or password")
 
@@ -70,13 +68,12 @@ def patientinfo():
         mphone = request.form["mphone"]
         email = request.form["email"]
         loginname = request.form["loginname"]
-        password = request.form["password"]
         mongo.db.patient_info.insert_one(
             {"title":title, "firstname":firstname, "lastname":lastname, "mi":mi, "patientid":patientid,
              "birthdate":birthdate, "gender":gender, "race":race, "ethnicity":ethnicity,
              "address":address, "city":city, "state":state, "country":country,"zip":zip,
-             "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "loginname":loginname, "password":password, "active":"Y"})
-        return redirect("/patientinfo")
+             "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "loginname":loginname, "active":"Y"})
+        return redirect("/patlist")
 
 @app.route("/patlist", methods = ['GET', 'POST'])
 def patlist():
