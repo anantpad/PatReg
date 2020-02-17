@@ -30,11 +30,11 @@
               <div class="form-row ml-5 mr-5">
                   <div class="form-group col-1">
                     <label for="title" class="text-primary">Title</label>
-                    <input class="form-control" type="text" name="title" value="{{title}}">
+                    <input class="form-control" type="title" name="title" value="{{title}}">
                   </div>
                   <div class="form-group col-4">
                     <label for="firstname" class="text-primary">First Name</label>
-                    <input class="form-control" type="text" name="firstname" value="{{firstname}}" disabled>
+                    <input class="form-control" type="firstname" name="firstname" value="{{firstname}}" disabled>
                   </div>
                   <div class="form-group col-4">
                     <label for="lastname" class="text-primary">Last Name</label>
@@ -46,25 +46,25 @@
                   </div>
                   <div class="form-group col-2">
                     <label for="patientid" class="text-primary">Patient Id</label>
-                    <input class="form-control" type="patientid" name="patientid" value="{{patientid}}" disabled>
+                    <input class="form-control" type="patientid" name="patientid" value="{{patientid}}">
                   </div>
                 </div>
               <div class="form-row ml-5 mr-5">
                   <div class="form-group col-3">
                     <label for="birthdate" class="text-primary">Birth date</label>
-                    <input class="form-control" type="date" name="birthdate" value="{{birthdate}}" required>
+                    <input class="form-control" type="date" name="birthdate" value="{{birthdate}}" disabled>
                   </div>
                   <div class="form-group col-3">
                     <label for="gender" class="text-primary">Gender</label>
-                    <div class="form-row">
+                    <div class="form-row" name = "gender" value="{{gender}}">
                       <div class="form-check">
-                        <input type="radio" name="gender" value="{{gender}}">Male
+                        <input type="radio">Male
                       </div>
                       <div class="form-check">
-                        <input type="radio" name="gender" value="{{gender}}">Female
+                        <input type="radio">Female
                       </div>
                       <div class="form-check">
-                        <input type="radio" name="gender" value="{{gender}}">Unknown
+                        <input type="radio">Unknown
                       </div>
                     </div>
                   </div>
@@ -115,16 +115,6 @@
                     <label for="zip" class="text-primary">Zip</label>
                     <input class="form-control" type="text" name="zip" value="{{zip}}">
                   </div>
-              </div>
-              <div class="form-row ml-5 mr-5">
-                <div class="form-group col-6">
-                  <label for="loginname" class="text-primary">Login Name</label>
-                  <input class="form-control" font="sans-Serif" type="text" name="loginname" value="{{loginname}}" required>
-                </div>
-                <div class="form-group col-6">
-                  <label for="password" class="text-primary">Password</label>
-                  <input class="form-control" type="password" name="password" value="" required>
-                </div>
               </div>
             </div>
           </div>

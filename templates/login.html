@@ -12,21 +12,44 @@
       <div class="form-row p-2">
         <div class="p-2 sr-only">User Name</div>
         <div class="">
-          <input class="form-control" type="text" placeholder="user name" name="username" value="{{username}}">
+          <input class="form-control" type="text" placeholder="user name" name="username" value="">
         </div>
       </div>
       <div class="form-row p-2">
         <div class="p-2 sr-only">Password</div>
         <div class="">
-          <input class="form-control" type="password" placeholder="password" name="password" value="{{password}}">
+          <input class="form-control" type="password" placeholder="password" name="password" value="">
         </div>
       </div>
       <div class="form-row p-2">
         <div class="p-2">
-          <input class="btn btn-primary" type="submit" name="" value="Submit">
+          <input type="submit" class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal" id="login" onclick="return checkin()" name="login" value="Submit">
         </div>
       </div>
     </form>
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Login Status</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+
+    </script>
   {% endblock %}
 </body>
 </html>

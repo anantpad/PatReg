@@ -9,6 +9,8 @@ from flask import redirect, session, flash
 app = Flask(__name__)
 app.debug = True
 
+app.secret_key = "sri"
+
 #config
 app.config["MONGO_URI"] = "mongodb://sridhar:asdf@cluster0-shard-00-00-aou9c.mongodb.net:27017,cluster0-shard-00-01-aou9c.mongodb.net:27017,cluster0-shard-00-02-aou9c.mongodb.net:27017/pat_reg?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true&w=majority"
 # app.config["MONGO_URI"] = "mongodb://sridhar:asdf@cluster0-aou9c.mongodb.net/test?retryWrites=true&w=majority"
@@ -23,14 +25,17 @@ def login():
     else:
         loginname = request.form["username"]
         password = request.form["password"]
+        session["loggedin"] = loginname
         # record = mongo.db.patient_info.find_one({"loginname": loginname, "password": password})
         # print(record["loginname"])
         # if record["loginname"] == loginname and record["password"] == password:
         #     return render_template("patient_reg.html", firstname = record["firstname"], lastname = record["lastname"])
         if loginname == 'sridhar' and password == 'asdf1234':
+            flash("Logged in Successfully")
             return redirect("/patlist")
         else:
             flash("Invalid Username or password")
+            return redirect("/")
 
 @app.route("/patient", methods = ['GET', 'POST'])
 def patlogin():
@@ -67,26 +72,28 @@ def patientinfo():
         wphone = request.form["wphone"]
         mphone = request.form["mphone"]
         email = request.form["email"]
-        loginname = request.form["loginname"]
+        website = request.form["website"]
         mongo.db.patient_info.insert_one(
             {"title":title, "firstname":firstname, "lastname":lastname, "mi":mi, "patientid":patientid,
              "birthdate":birthdate, "gender":gender, "race":race, "ethnicity":ethnicity,
              "address":address, "city":city, "state":state, "country":country,"zip":zip,
-             "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "loginname":loginname, "active":"Y"})
+             "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "website": website, "active":"Y"})
+        flash("Patient Created Successfully")
         return redirect("/patlist")
 
 @app.route("/patlist", methods = ['GET', 'POST'])
 def patlist():
     if request.method == 'GET':
         patientList = mongo.db.patient_info.find({})
+        print(patientList)
         return render_template("pat_list.html", patientList = patientList)
 
 @app.route("/delete", methods = ['GET', 'POST'])
 def delete():
     if request.method == 'GET':
         patientid = request.args['patientid']
-        print(patientid)
         mongo.db.patient_info.delete_one({'patientid':patientid})
+        flash("Selected Patient Record deleted")
         return redirect("/patlist")
 
 @app.route("/edit", methods=['GET','POST'])
@@ -112,14 +119,16 @@ def edit():
         wphone = record["wphone"]
         mphone = record["mphone"]
         email = record["email"]
-        loginname = record["loginname"]
-        password = record["password"]
+        website = record["website"]
         print(address)
         return render_template("editpatientreg.html", title = title, firstname = firstname, lastname = lastname, mi = mi, patientid = patientid,
                                birthdate = birthdate, gender = gender, race = race, ethnicity = ethnicity, address = address, city = city, state = state, country = country, zip = zip,
-                               hphone = hphone, wphone = wphone, mphone = mphone, email = email, loginname = loginname)
+                               hphone = hphone, wphone = wphone, mphone = mphone, email = email, website = website)
     elif request.method == 'POST':
         patientid = request.form["patientid"]
+        title = request.form["title"]
+        mi = request.form["mi"]
+        gender = request.form["gender"]
         race = request.form["race"]
         ethnicity = request.form["ethnicity"]
         address = request.form["address"]
@@ -131,11 +140,20 @@ def edit():
         wphone = request.form["wphone"]
         mphone = request.form["mphone"]
         email = request.form["email"]
-        loginname = request.form["loginname"]
-        mongo.db.patient_info.update_one({"patientid":patientid},
-                                         {"$set":{"race":race,"ethnicity":ethnicity, "address":address,"city":city, "state":state, "country":country, "zip":zip,
-                                                  "hphone":hphone, "wphone":wphone, "mphone":mphone, "email":email, "loginname":loginname}})
+        website = request.form["website"]
+        mongo.db.patient_info.update_one(
+            {"patientid": patientid},{"$set":{"title": title, "mi": mi, "gender": gender, "race": race,"ethnicity": ethnicity,
+                                             "address": address,"city": city, "state": state, "country": country, "zip": zip,
+                                             "hphone": hphone, "wphone": wphone, "mphone": mphone, "email": email, "website": website}})
+        flash("Patient Record edited Successfully")
         return redirect("/patlist")
+
+@app.route("/logout", methods=['GET', 'POST'])
+def logout():
+    flash(session["loggedin"] + " " + "Logged Out Successfully")
+    session.pop("loggedin", None)
+    print(session)
+    return redirect("/")
 
 #run
 if __name__ == "__main__":
