@@ -23,6 +23,7 @@ def login():
     if request.method == 'GET':
         return render_template("login.html")
     else:
+        error = None
         loginname = request.form["username"]
         password = request.form["password"]
         session["loggedin"] = loginname
@@ -34,8 +35,9 @@ def login():
             flash("Logged in Successfully")
             return redirect("/patlist")
         else:
-            flash("Invalid Username or password")
-            return redirect("/")
+            error = "Invalid credentials"
+            flash(error)
+            return render_template("login.html", error = error)
 
 @app.route("/patient", methods = ['GET', 'POST'])
 def patlogin():

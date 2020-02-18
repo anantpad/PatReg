@@ -7,12 +7,15 @@
 </head>
 <body>
   {% block content %}
-  <h1 class="bg-info p-5">Registration <i class="fa fa-user-injured"></i></h1>
-    <form class="form-inline pl-5" action="" method="post">
+  <h1 class="bg-info p-4">Registration <i class="fa fa-user-injured"></i></h1>
+  {% if error %}
+  <p class="error pl-4"><strong>Error:</strong> {{error}}</p>
+  {% endif %}
+    <form class="form-inline pl-4" action="" method="post">
       <div class="form-row p-2">
         <div class="p-2 sr-only">User Name</div>
         <div class="">
-          <input class="form-control" type="text" placeholder="user name" name="username" value="">
+          <input class="form-control" type="text" placeholder="user name" name="username" value="{{username}}">
         </div>
       </div>
       <div class="form-row p-2">
@@ -23,7 +26,7 @@
       </div>
       <div class="form-row p-2">
         <div class="p-2">
-          <input type="submit" class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal" id="login" onclick="return checkin()" name="login" value="Submit">
+          <input type="submit" class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal" onClick="alert('Testing')" value="Submit">
         </div>
       </div>
     </form>
@@ -38,7 +41,9 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-
+            {% if error %}
+            <p class="error pl-4"><strong>Error:</strong> {{error}}</p>
+            {% endif %}
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">

@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8">
     {% extends 'layout.html' %}
-    <title>Paient List</title>
+    <title>Patient List</title>
   </head>
   <body>
     {% block content %}
-    <h1 class="bg-info p-5">Patient List <i class="fas fa-list"></i></h1>
-    <form class="form-group pt-5" action="/patlist" method="post">
-      <div class="form-row pl-5 pr-5">
+    <h1 class="bg-info p-4">Patient List <i class="fas fa-list"></i></h1>
+    <form class="form-group pt-3" action="/patlist" method="post">
+      <div class="form-row pl-3 pr-3">
         <table class="table table-responsive-sm table-striped table-hover table-bordered">
           <caption>List of Patients</caption>
           <thead class="table-dark">
@@ -72,12 +72,12 @@
               {% endif %}
               {% endfor %}
               <td>
-                <a href="/delete?patientid={{each_patient['patientid']}}" class="btn btn-primary">
+                <a href="/delete?patientid={{each_patient['patientid']}}" onclick="alert('Delete Patient Details')" class="btn btn-primary">
                   <i class="fa fa-trash"></i>
                 </a>
               </td>
               <td>
-                <a href="/edit?patientid={{each_patient['patientid']}}" class="btn btn-primary">
+                <a href="/edit?patientid={{each_patient['patientid']}}" onclick="alert('Edit Patient Details')" class="btn btn-primary">
                   <i class="fa fa-edit"></i>
                 </a>
               </td>
@@ -86,13 +86,13 @@
           </tbody>
         </table>
       </div>
-      <div class="form-row pl-5 pr-5">
+      <div class="form-row pl-3 pr-3">
         <div class="form-inline col-auto">
-          <a class="btn btn-primary col-auto" role="button" href="/patientinfo">Don't see your patient? Click to Register Here</a>
+          <a class="btn btn-primary col-auto" onclick="alert('Enter New Patient Details here')" role="button" href="/patientinfo">Don't see your patient? Click to Register Here</a>
         </div>
         <div class="form-inline col-auto">
           <label for="logout" class="sr-only">Logout</label>
-          <a class="btn btn-danger" role="button" id="logout" href="/logout">Logout</a>
+          <a class="btn btn-danger" role="button" id="logout" onclick="alert('User Logged Out Successfully')" href="/logout">Logout</a>
         </div>
       </div>
     </form>

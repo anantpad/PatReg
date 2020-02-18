@@ -55,41 +55,28 @@
                     <input class="form-control" type="date" name="birthdate" value="{{birthdate}}" disabled>
                   </div>
                   <div class="form-group col-3">
-                    <label for="gender" class="text-primary">Gender</label>
-                    <div class="form-row" name = "gender" value="{{gender}}">
-                      <div class="form-check">
-                        <input type="radio">Male
-                      </div>
-                      <div class="form-check">
-                        <input type="radio">Female
-                      </div>
-                      <div class="form-check">
-                        <input type="radio">Unknown
-                      </div>
+                    <div class="form-row" name="gender" value="{{gender}}">
+                      <label for="gender" class="text-primary">Gender</label>
+                      <select class="form-control" name="gender" value="{{gender}}">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female </option>
+                        <option value="Unknown">Unknown</option>
+                      </select>
                     </div>
                   </div>
                   <div class="form-group col-3">
                     <label for="race" class="text-primary">Race</label>
-                    <div class="form-row">
-                      <div class="form-check">
-                        <input type="checkbox" name="race" value="Caucasian">Caucasian
-                      </div>
-                      <div class="form-check">
-                        <input type="checkbox" name="race" value="Asian">Asian
-                      </div>
-                      <div class="form-check">
-                        <input type="checkbox" name="race" value="African">African
-                      </div>
-                      <div class="form-check">
-                        <input type="checkbox" name="race" value="Other">Other
-                      </div>
-                    </div>
+                    <select class="form-control" name="race" value="{{race}}">
+                      <option value="Asian">Asian</option>
+                      <option value="Caucasian">Caucasian</option>
+                      <option value="Other">Other</option>
+                    </select>
                   </div>
                   <div class="form-group col-3">
                     <label for="ethnicity" class="text-primary">Ethnicity</label>
                     <input class="form-control" type="text" name="ethnicity" value="{{ethnicity}}">
                   </div>
-                </div>
+              </div>
               <div class="form-row ml-5 mr-5">
                   <div class="form-group col-4">
                     <label for="address" class="text-primary">Address</label>
@@ -153,7 +140,7 @@
       </div>
       <div class="form-row ml-5 mr-5 pt-3">
         <div class="form-group col-auto">
-          <input class="btn btn-primary" type="submit" onclick="alert('Your record is saved')" name="" value="Submit">
+          <input class="btn btn-primary" type="submit" onclick="alert('Edited Patient Record is now saved')" name="" value="Submit">
         </div>
       </div>
     </form>
