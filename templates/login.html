@@ -26,7 +26,8 @@
       </div>
       <div class="form-row p-2">
         <div class="p-2">
-          <input type="submit" class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal" onClick="alert('Testing')" value="Submit">
+          <input type="submit" class="form-control btn btn-primary" data-toggle="modal" data-target="#myModal"
+          onclick="return Alert();" value="Submit">
         </div>
       </div>
     </form>
@@ -41,9 +42,9 @@
           </div>
           <!-- Modal body -->
           <div class="modal-body">
-            {% if error %}
-            <p class="error pl-4"><strong>Error:</strong> {{error}}</p>
-            {% endif %}
+            <!-- {% if error %} -->
+            <p class="error pl-4" id="error"><strong>Error:</strong> {{error}}</p>
+            <!-- {% endif %} -->
           </div>
           <!-- Modal footer -->
           <div class="modal-footer">
@@ -53,6 +54,12 @@
       </div>
     </div>
     <script type="text/javascript">
+    // function Alert(){
+      // err = document.getElementById("error");
+      // err.innerHTML="Testing";
+      // console.log("testing");
+      // return false;
+    // }
 
     </script>
   {% endblock %}

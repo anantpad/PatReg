@@ -20,20 +20,14 @@
       <a class="nav-item nav-link active ml-3 mr-3 mb-2" href="/patlist" role="button">Patient List</a>
     </nav>
     <form class="bg bg-light" action="/patientinfo" method="post">
-      <div class="accordian" id="accordian">
-        <div class="card">
-          <div class="card-header bg-warning" id="headingOne">
-            <button
-              class="btn btn-link"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne">Patient Information
-            </button>
+      <!-- <div class="accordian" id="accordian"> -->
+        <!-- <div class="card"> -->
+          <div class="card-header bg-warning" id="headingOne" >
+            <button class="btn btn-info" type="button" name="PatientInformation" id="PatientInformation"
+            onclick="showPI();">Patient Information</button>
           </div>
-          <div id="collapseOne" class="collapse show" aria-labelledby="#headingOne" data-parent="#accordion">
-            <div class="card-body">
+          <!-- <div id="collapseOne" class="collapse show" aria-labelledby="#headingOne" data-parent="#accordion"> -->
+            <div class="card-body" id="PI" name="PI">
               <div class="form-row ml-5 mr-5">
                   <div class="form-group col-1">
                     <label for="title" class="text-primary">Title</label>
@@ -124,21 +118,14 @@
                   </div>
               </div>
             </div>
+          <!-- </div> -->
+        <!-- </div> -->
+        <!-- <div class="card"> -->
+          <div class="card-header bg-warning" id="headingTwo" >
+            <button class="btn btn-link" type="button" onclick="">Additional Information</button>
           </div>
-        </div>
-        <div class="card">
-          <div class="card-header bg-warning" id="headingTwo">
-            <button
-              class="btn btn-link"
-              type="button"
-              data-toggle="collapse"
-              data-target="#collapseTwo"
-              aria-expanded="true"
-              aria-controls="collapseTwo">Additional Information
-            </button>
-          </div>
-          <div id="collapseTwo" class="collapse show" aria-labelledby="#headingTwo" data-parent="#accordion">
-            <div class="card-body">
+          <!-- <div id="collapseTwo" class="collapse show" aria-labelledby="#headingTwo" data-parent="#accordion"> -->
+            <div class="card-body" id="2">
               <div class="form-row ml-5 mr-5">
                   <div class="form-group col-2">
                     <label for="hphone" class="text-primary">Home Phone</label>
@@ -162,9 +149,9 @@
                   </div>
                 </div>
             </div>
-          </div>
-        </div>
-      </div>
+          <!-- </div> -->
+        <!-- </div> -->
+      <!-- </div> -->
       <div class="form-row ml-5 mr-5 pt-3">
         <div class="form-group col-auto">
           <input class="btn btn-primary" type="reset" value="Reset">
@@ -174,6 +161,12 @@
         </div>
       </div>
     </form>
+    <script type="text/javascript">
+      function showPI(){
+        var text = document.getElementById("PatientInformation").value;
+        console.log(text);
+      }
+    </script>
     {% endblock %}
   </body>
 </html>

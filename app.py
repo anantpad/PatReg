@@ -33,6 +33,7 @@ def login():
         #     return render_template("patient_reg.html", firstname = record["firstname"], lastname = record["lastname"])
         if loginname == 'sridhar' and password == 'asdf1234':
             flash("Logged in Successfully")
+            error = "Logged in Successfully"
             return redirect("/patlist")
         else:
             error = "Invalid credentials"
