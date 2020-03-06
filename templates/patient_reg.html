@@ -24,11 +24,11 @@
         <!-- <div class="card"> -->
           <div class="card-header bg-warning" id="headingOne" >
             <button class="btn btn-info" type="button" name="PatientInformation" id="PatientInformation"
-            onclick="showPI();">Patient Information</button>
+            onclick="showPI(this);">Patient Information</button>
           </div>
           <!-- <div id="collapseOne" class="collapse show" aria-labelledby="#headingOne" data-parent="#accordion"> -->
-            <div class="card-body" id="PI" name="PI">
-              <div class="form-row ml-5 mr-5">
+            <div class="card-body">
+              <div class="form-row ml-5 mr-5 PI" id="PI" name="PI">
                   <div class="form-group col-1">
                     <label for="title" class="text-primary">Title</label>
                     <input class="form-control" type="title" name="title" value="" required>
@@ -162,9 +162,21 @@
       </div>
     </form>
     <script type="text/javascript">
-      function showPI(){
-        var text = document.getElementById("PatientInformation").value;
+      function showPI(x){
+        x.innerHTML = "Hide Additional Information";
+        // div = text[0];
+        var text = document.getElementById("PI").children;
         console.log(text);
+        for (var i=0; i<text.length; i++){
+          i.style.display = none;
+        }
+        // if (text.style.display == "none"){
+        //   text.style.display="block";
+        // }
+        // else{
+        //   text.style.display = "none"
+        //   x.innerHTML = "Additional Information"
+        // }
       }
     </script>
     {% endblock %}
